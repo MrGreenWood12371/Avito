@@ -26,7 +26,7 @@ export const onSuccess = (arr) => {
 const onErrorButtonClick = () => {
   closeButton.removeEventListener(`click`, onErrorButtonClick);
   node.remove();
-}
+};
 
 const onErrorEscPress = (evt) => {
   if (evt.keyCode === window.util.ESC_KEYCODE) {
@@ -35,7 +35,7 @@ const onErrorEscPress = (evt) => {
     window.removeEventListener(`click`, onErrorWindowClick);
     node.remove();
   }
-}
+};
 
 function onErrorWindowClick() {
   window.removeEventListener(`click`, onErrorWindowClick);
@@ -48,7 +48,7 @@ const onErrorOpen = () => {
   closeButton.addEventListener(`click`, onErrorButtonClick);
   document.addEventListener(`keydown`, onErrorEscPress);
   window.addEventListener(`click`, onErrorWindowClick);
-}
+};
 
 export const onError = (errorMessage) => {
   let nodeText = node.querySelector(`p`);
